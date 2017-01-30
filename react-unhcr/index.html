@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>HTML/CSS · GitBook</title>
+        <title>UNHCR challenge · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="./" />
+    <link rel="next" href="../CONTRIBUTING.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="../react-module/Lesson4.html" />
     
 
     </head>
@@ -102,9 +102,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../html-css/">
             
-                <a href="./#html-css">
+                <a href="../html-css/#html-css">
             
                     
                     HTML/CSS
@@ -116,9 +116,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="./">
+        <li class="chapter " data-level="1.2.1" data-path="../html-css/">
             
-                <a href="./#lesson-1">
+                <a href="../html-css/#lesson-1">
             
                     
                     Lesson 1
@@ -129,9 +129,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="./">
+        <li class="chapter " data-level="1.2.2" data-path="../html-css/">
             
-                <a href="./#lesson-2">
+                <a href="../html-css/#lesson-2">
             
                     
                     Lesson 2
@@ -142,9 +142,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="./">
+        <li class="chapter " data-level="1.2.3" data-path="../html-css/">
             
-                <a href="./#lesson-3">
+                <a href="../html-css/#lesson-3">
             
                     
                     Lesson 3
@@ -291,9 +291,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="../react-unhcr/">
+        <li class="chapter active" data-level="1.5.5" data-path="./">
             
-                <a href="../react-unhcr/">
+                <a href="./">
             
                     
                     UNHCR challenge
@@ -352,7 +352,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >HTML/CSS</a>
+        <a href=".." >UNHCR challenge</a>
     </h1>
 </div>
 
@@ -367,131 +367,57 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="html-css">HTML-CSS</h1>
-<h3 id="introduction">Introduction</h3>
-<p>In this module you will learn to write and understand basic HTML(5) and CSS syntax.
-Also we will go into the DOM and file structure. There will be time spent on why and how you use different programming languages (like CSS and HTML). When it comes to CSS you should understand how CSS decides which rules are applied, also you should have an understanding what is meant by elements and attributes. Making responsive websites is an important part of front-end programming. You will learn how to make your websites responsive by using media queries using a &#x201C;mobile first&#x201D; approach. Also you will get familiar with developer tools that help make this process easier. During this entire module you&#x2019;ll (learn to) work in a text editor. It&#x2019;s expected from you that your code is properly styled using the style guide for HTML/CSS. You&#x2019;ll be introduced to the inspector that helps you debug and understand you code better.</p>
-<h2 id="lesson-1">Lesson 1</h2>
+                                <p>This is a Test for the React class at <a href="http://codeyourfuture.co" target="_blank">CodeYourFuture</a></p>
+<h2 id="description">Description</h2>
+<p>We will use the UNHCR API to retrieve and display some of their data.</p>
+<p>For more information about UNHCR API and the data it provides, you can read the <a href="http://data.unhcr.org/wiki/index.php/API_Documentation.html" target="_blank">API documentation</a></p>
+<p>For this exercise, we are using two of the APIs provided by UNHCR:</p>
 <ul>
-<li>Introduction CodeYourFuture</li>
-<li>Hello new students and mentors!</li>
-<li>DOM structure</li>
-<li>HTML syntax (How to work in a text editor)</li>
-<li>CSS syntax</li>
-<li>Linking to local files</li>
-</ul>
-<h2 id="homework">Homework</h2>
-<h3 id="read-these-chapters-from-the-front-end-handbook">Read these Chapters from the <a href="https://www.frontendhandbook.com" target="_blank">Front-end Handbook</a></h3>
-<ul>
-<li><a href="https://www.frontendhandbook.com/what-is-a-FD.html" target="_blank">What Is a Front-End Developer?</a></li>
-<li><a href="https://www.frontendhandbook.com/practice.html" target="_blank">Part I. The Front-End Practice</a></li>
-</ul>
-<h3 id="watch-these-videos">Watch these videos:</h3>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=7_LPdttKXPc" target="_blank">How the Internet Works in 5 Minutes</a></li>
-<li><a href="https://www.youtube.com/watch?v=WjDrMKZWCt0" target="_blank">How Web Browsers Work</a></li>
-</ul>
-<h3 id="exercises">Exercises:</h3>
-<ul>
-<li>Khan Academy: <a href="https://www.khanacademy.org/computing/computer-programming/html-css#concept-intro" target="_blank">Into to HTML/CSS: Making webpages</a></li>
-</ul>
-<h3 id="assignment">Assignment:</h3>
-<ol>
-<li><p>Set up a <a href="https://github.com" target="_blank">Github</a> account</p>
-<ul>
-<li>Create a local repository named <code>&lt;your-username&gt;.github.com</code></li>
-</ul>
+<li><p><strong><a href="http://data.unhcr.org/wiki/index.php/Get-stats-country-of-residence.html" target="_blank"><code>GET stats/country_of_residence</code></a></strong>: Which returns an array of countries that we we are using to display the list of countries by <code>CountriesList</code> component.</p>
 </li>
-<li><p>Make your own page cloning <a href="https://instagram.com" target="_blank">Instagram</a></p>
-<ul>
-<li>At least two pages</li>
-<li>Have styles in a separate CSS file</li>
-<li>Include the following:<ul>
-<li>A homepage which is a &apos;stream&apos; of images</li>
-<li>A picture</li>
-</ul>
+<li><p><strong><a href="http://data.unhcr.org/wiki/index.php/Get-stats-demographics.html" target="_blank"><code>GET stats/demographics</code></a></strong>: which returns statistics about the number of refugees admitted to that country in a specific year.
+The request url is similar to this:
+<a href="http://data.unhcr.org/api/stats/demographics.json?year=2013&amp;country_of_residence=TUR" target="_blank">http://data.unhcr.org/api/stats/demographics.json?year=2013&amp;country_of_residence=TUR</a></p>
 </li>
-<li>Make sure that you page looks nice, and that your text is readable</li>
-<li>Upload your files to Github (See below)</li>
 </ul>
-</li>
-</ol>
-<h3 id="extra-material">Extra material:</h3>
+<h2 id="task-1---make-a-component-to-display-the-country-details">Task 1 - Make a Component to display the Country Details</h2>
+<p>We are already retrieving the list of countries from the Countries API and displaying them on a component called CountriesList.</p>
+<p>We are also making a call to the demographics API (with hardcoded values to retrieve data for Turkey in 2013) - the data is displayed in App.js in the code below.</p>
+<pre><code>&lt;div className=&quot;app-country-statistics&quot;&gt;
+  &lt;strong&gt;Country: &lt;/strong&gt;{this.state.countryData.country_of_residence_en}&lt;br/&gt;
+  &lt;strong&gt;Year: &lt;/strong&gt;{this.state.countryData.year}&lt;br/&gt;
+  &lt;strong&gt;Female Refugees: &lt;/strong&gt;{this.state.countryData.female_total_value}&lt;br/&gt;
+  &lt;strong&gt;Male Refugees: &lt;/strong&gt;{this.state.countryData.male_total_value}&lt;br/&gt;
+&lt;/div&gt;
+</code></pre><ul>
+<li>Move that code to a Component called CountryDetails</li>
+<li>Place it under the folder /components</li>
+<li>Import it into App.js and use it to display the same data</li>
+<li>Hint: For ideas on how to track the selection of the list, check out <a href="http://stackoverflow.com/questions/28868071/onchange-event-using-react-js-for-drop-down" target="_blank">here</a></li>
+<li>Hint: the countryData would have to be passed to the new Component you created</li>
+</ul>
+<h2 id="task-2---display-the-details-of-the-selected-country">Task 2 - Display the details of the selected country</h2>
+<p>We now hardcode the URL to get Turkey&apos;s statistics in 2013. In this step we will get the statistics for the country selected in the list when the user clicks on the button.</p>
 <ul>
-<li>Next week reading/ practice (these topics will be discussed next week but If you want to read ahead):<ul>
-<li>Next week we will talk about responsive web design and using media queries, if you already want to start reading about this subject check out this <a href="http://www.w3schools.com/css/css_rwd_intro.asp" target="_blank">Responsive Web Design - Introduction</a>&quot;. And take a look at this <a href="http://mediaqueri.es" target="_blank">website</a></li>
+<li>Instead of displaying the Country Details when the page loads, move it to be displayed when the user clicks on the <code>Retrieve Country Statistics</code> button.</li>
+<li>You will probably need to keep track of what country is selected by the user (does it go into props or state?) and pass it in the URL.</li>
+<li>Leave the year hardcoded as 2013 for now.</li>
+</ul>
+<h2 id="task-3---select-the-year">Task 3 - Select the Year</h2>
+<p>So far we had the Year hardcoded. We want to change that.</p>
+<p>UNHCR provides its data for certain years - to get the list of available years, you can use this api - <a href="http://data.unhcr.org/wiki/index.php/Get-stats-time-series-years.html" target="_blank">http://data.unhcr.org/wiki/index.php/Get-stats-time-series-years.html</a>.</p>
+<p>Make a call to retrieve the list of Years, and display them for the User to select from. And then use the combination of Year/Country to retrieve the country statistics and display them.</p>
+<h2 id="task-4---write-a-test-grouphomework">Task 4 - Write a Test (Group/Homework)</h2>
+<p>At your CountryDetails, we display the Total number of female and male refugees. Even though the API returns the Total number of refugees, it seems it&apos;s calculating it wrongly sometimes, hence we will do the calculation ourself by adding the two values and displaying the total.</p>
+<ul>
+<li>Instead of writing the functionality for the Total directly, write a Test for it first in a file called CountryDetails.test.js<ul>
+<li>You can start by writing a test for the existing functionality</li>
+<li>Add a Test for the Total functionality (which will fail initially )</li>
+<li>Then implement the functionality for Total and see your Test pass.</li>
+<li>For info about running tests, you can check out the <a href="https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests" target="_blank">create-react-app documentation</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="lesson-2">Lesson 2</h2>
-<ul>
-<li>Repeat/explain how HTML is structured, go through the entire html structure, explain all different elements</li>
-<li>CSS<ul>
-<li>Tips and tricks</li>
-</ul>
-</li>
-<li>Discuss code style<ul>
-<li>Indenting code
-*</li>
-</ul>
-</li>
-<li>Media queries</li>
-<li>Understand why/ how to use which language</li>
-<li>How to work with the inspector</li>
-<li>Resume presentations</li>
-</ul>
-<h2 id="homework">Homework</h2>
-<h3 id="read">Read:</h3>
-<ul>
-<li><a href="https://teamtreehouse.com/library/css3/media-queries/introduction" target="_blank">Introduction to media queries</a></li>
-<li><a href="https://css-tricks.com/css-media-queries/" target="_blank">More about media queries</a></li>
-<li><a href="http://www.w3schools.com/html/html5_syntax.asp" target="_blank">HTML syntax</a></li>
-<li><a href="https://css-tricks.com/multiple-class-id-selectors/" target="_blank">Article about multiple ways to select classes and id&apos;s</a></li>
-<li><a href="http://www.colorcombos.com/index.html" target="_blank">Read about nice color combinations</a></li>
-</ul>
-<h3 id="exercises">Exercises</h3>
-<ul>
-<li><a href="https://www.codecademy.com/courses/web-beginner-en-6merh/0/1" target="_blank">Codecademy course on CSS Positioning</a></li>
-<li><a href="https://flukeout.github.io/" target="_blank">CSS Selector learning game</a></li>
-</ul>
-<h3 id="assignments">Assignments:</h3>
-<ol>
-<li><a href="https://github.com/Code-Your-Future/build-a-house" target="_blank">Build A House</a></li>
-<li><a href="https://github.com/Code-Your-Future/css-challenge" target="_blank">Style A Website</a></li>
-</ol>
-<h3 id="further-learning">Further Learning:</h3>
-<p>If you have completed all the assignments have a go at these:</p>
-<ul>
-<li><strong>Exercise:</strong> Udacity: <a href="https://www.udacity.com/course/responsive-web-design-fundamentals--ud893" target="_blank">Responsive web design fundamentals</a></li>
-<li><strong>Exercise:</strong> <a href="http://www.w3schools.com/css/css_rwd_intro.asp" target="_blank">Responsive Web Design - Introduction</a></li>
-</ul>
-<h2 id="lesson-3">Lesson 3</h2>
-<ul>
-<li>Presentations of students website remakes</li>
-<li>Repeat topics of last two weeks:<ul>
-<li>Understand why/ how to use which language</li>
-<li>Media-queries</li>
-<li>Responsive Websites</li>
-<li>DOM</li>
-<li>File structure, external links</li>
-</ul>
-</li>
-<li>How to find information on the web</li>
-<li>Task: find some info about a certain topic in groups of 2, present to each other<ul>
-<li>Choose one of the following subjects, look up how it works and implement it in a webpage<ul>
-<li>CSS transitions</li>
-<li>CSS animations with keyframes</li>
-<li>SVG</li>
-<li>Dropdown menu in CSS</li>
-<li>flex-box</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="homework">Homework</h2>
-<h2 id="homework">Homework</h2>
-<p>For home assignment you can build a responsive blog and get ready for javascript. Follow following <a href="assignemnt_blog.md">article</a></p>
 
                                 
                                 </section>
@@ -519,12 +445,12 @@ Also we will go into the DOM and file structure. There will be time spent on why
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="../react-module/Lesson4.html" class="navigation navigation-prev " aria-label="Previous page: Lesson 4">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="./#lesson-1" class="navigation navigation-next " aria-label="Next page: Lesson 1">
+                <a href="../CONTRIBUTING.html" class="navigation navigation-next " aria-label="Next page: Contributing">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -535,7 +461,7 @@ Also we will go into the DOM and file structure. There will be time spent on why
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HTML/CSS","level":"1.2","depth":1,"next":{"title":"Lesson 1","level":"1.2.1","depth":2,"anchor":"#lesson-1","path":"html-css/README.md","ref":"html-css/README.md#lesson-1","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"html-css/README.md","mtime":"2017-01-30T21:49:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-30T23:20:02.340Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"UNHCR challenge","level":"1.5.5","depth":2,"next":{"title":"Contributing","level":"1.6","depth":1,"path":"CONTRIBUTING.md","ref":"CONTRIBUTING.md","articles":[]},"previous":{"title":"Lesson 4","level":"1.5.4","depth":2,"path":"react-module/Lesson4.md","ref":"react-module/Lesson4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react-unhcr/README.md","mtime":"2017-01-30T23:15:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-30T23:20:02.340Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

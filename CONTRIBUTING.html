@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · GitBook</title>
+        <title>Contributing · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="html-css/" />
     
+    <link rel="prev" href="react-unhcr/" />
     
 
     </head>
@@ -87,7 +87,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -307,7 +307,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="CONTRIBUTING.html">
+        <li class="chapter active" data-level="1.6" data-path="CONTRIBUTING.html">
             
                 <a href="CONTRIBUTING.html">
             
@@ -350,7 +350,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >Contributing</a>
     </h1>
 </div>
 
@@ -365,23 +365,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction">Introduction</h1>
-<p>This is the course material for <a href="http://codeyourfuture.co/" target="_blank">Code Your Future</a>, a
-not-for-profit coding school for refugees.</p>
-<p>During the course you will learn the whole web development stack, including HTML/CSS, JavaScript and backend technologies. We&#x2019;ll complement the training with workshops on modern software methodologies and job interview practices.</p>
-<p>Our 6-month web development programme follows the success of our affiliate organisation in Amsterdam, <a href="http://hackyourfuture.net" target="_blank">HackYourFuture</a>, where over 50% of the graduates have found technical jobs.</p>
-<h2 id="todos">TODOs</h2>
-<p><strong>This documentation is work in progress</strong>.</p>
-<ul>
-<li>Write intro</li>
-<li>Merge <a href="https://github.com/Code-Your-Future/javascript-module1/tree/first-material" target="_blank">javascript-module1/first-material</a>?</li>
-<li>Agree on a format for course materials</li>
-<li>Rewrite git repositories to new format</li>
-<li>Add links from READMEs to repositories for homework</li>
-<li>Refactor documentation to a monorepo?</li>
-<li>Separate student materials and instructor outlines?</li>
-</ul>
-
+                                <h1 id="contributing">Contributing</h1>
+<p>To contribute to the Code Your Future syllabus, fork and open a pull request to
+<a href="https://github.com/code-your-future/syllabus" target="_blank">this repository</a> or one of the
+<a href="https://github.com/code-your-future/syllabus" target="_blank">submodules</a>.</p>
+<h2 id="publish-the-gitbook">Publish the Gitbook</h2>
+<p>Install the <a href="https://github.com/GitbookIO/gitbook" target="_blank">GitBook</a> CLI:</p>
+<pre><code class="lang-sh">npm install -g gitbook-cli
+</code></pre>
+<p>If the changes you want to publish are in one of the modules, make sure your
+changes have landed into the <code>master</code> branch of that repository.</p>
+<p>Pull the latest syllabus modules:</p>
+<pre><code>git submodule update --init --recursive
+</code></pre><p>Test your changes:</p>
+<pre><code>gitbook serve
+open http://localhost:4000
+</code></pre><p>Build the docsite into the <code>_book</code> directory</p>
+<pre><code>gitbook build
+</code></pre><p>Publish the built <code>_book</code> directory to GitHub pages</p>
+<pre><code>git commit -am &apos;Publish gitbook&apos;
+git subtree push --prefix _book origin gh-pages
+</code></pre>
                                 
                                 </section>
                             
@@ -408,10 +412,10 @@ not-for-profit coding school for refugees.</p>
 
             
                 
-                
-                <a href="html-css/#html-css" class="navigation navigation-next navigation-unique" aria-label="Next page: HTML/CSS">
-                    <i class="fa fa-angle-right"></i>
+                <a href="react-unhcr/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: UNHCR challenge">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -420,7 +424,7 @@ not-for-profit coding school for refugees.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"HTML/CSS","level":"1.2","depth":1,"anchor":"#html-css","path":"html-css/README.md","ref":"html-css/README.md#html-css","articles":[{"title":"Lesson 1","level":"1.2.1","depth":2,"anchor":"#lesson-1","path":"html-css/README.md","ref":"html-css/README.md#lesson-1","articles":[]},{"title":"Lesson 2","level":"1.2.2","depth":2,"anchor":"#lesson-2","path":"html-css/README.md","ref":"html-css/README.md#lesson-2","articles":[]},{"title":"Lesson 3","level":"1.2.3","depth":2,"anchor":"#lesson-3","path":"html-css/README.md","ref":"html-css/README.md#lesson-3","articles":[]},{"title":"Build a house","level":"1.2.4","depth":2,"path":"build-a-house/README.md","ref":"build-a-house/README.md","articles":[]},{"title":"Blog challenge","level":"1.2.5","depth":2,"path":"blog-challenge/README.md","ref":"blog-challenge/README.md","articles":[]},{"title":"CSS challenge","level":"1.2.6","depth":2,"path":"css-challenge/README.md","ref":"css-challenge/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2017-01-30T22:57:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-30T23:20:02.340Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Contributing","level":"1.6","depth":1,"previous":{"title":"UNHCR challenge","level":"1.5.5","depth":2,"path":"react-unhcr/README.md","ref":"react-unhcr/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CONTRIBUTING.md","mtime":"2017-01-30T22:58:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-30T23:20:02.340Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

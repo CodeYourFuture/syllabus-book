@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>HTML/CSS · GitBook</title>
+        <title>JavaScript II · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="./" />
+    <link rel="next" href="../react-module/" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="../javascript-module1/" />
     
 
     </head>
@@ -102,9 +102,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../html-css/">
             
-                <a href="./#html-css">
+                <a href="../html-css/#html-css">
             
                     
                     HTML/CSS
@@ -116,9 +116,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="./">
+        <li class="chapter " data-level="1.2.1" data-path="../html-css/">
             
-                <a href="./#lesson-1">
+                <a href="../html-css/#lesson-1">
             
                     
                     Lesson 1
@@ -129,9 +129,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="./">
+        <li class="chapter " data-level="1.2.2" data-path="../html-css/">
             
-                <a href="./#lesson-2">
+                <a href="../html-css/#lesson-2">
             
                     
                     Lesson 2
@@ -142,9 +142,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="./">
+        <li class="chapter " data-level="1.2.3" data-path="../html-css/">
             
-                <a href="./#lesson-3">
+                <a href="../html-css/#lesson-3">
             
                     
                     Lesson 3
@@ -212,9 +212,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../javascript-module2/">
+        <li class="chapter active" data-level="1.4" data-path="./">
             
-                <a href="../javascript-module2/">
+                <a href="./">
             
                     
                     JavaScript II
@@ -352,7 +352,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >HTML/CSS</a>
+        <a href=".." >JavaScript II</a>
     </h1>
 </div>
 
@@ -367,131 +367,101 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="html-css">HTML-CSS</h1>
-<h3 id="introduction">Introduction</h3>
-<p>In this module you will learn to write and understand basic HTML(5) and CSS syntax.
-Also we will go into the DOM and file structure. There will be time spent on why and how you use different programming languages (like CSS and HTML). When it comes to CSS you should understand how CSS decides which rules are applied, also you should have an understanding what is meant by elements and attributes. Making responsive websites is an important part of front-end programming. You will learn how to make your websites responsive by using media queries using a &#x201C;mobile first&#x201D; approach. Also you will get familiar with developer tools that help make this process easier. During this entire module you&#x2019;ll (learn to) work in a text editor. It&#x2019;s expected from you that your code is properly styled using the style guide for HTML/CSS. You&#x2019;ll be introduced to the inspector that helps you debug and understand you code better.</p>
-<h2 id="lesson-1">Lesson 1</h2>
+                                <h1 id="javascript-ii---class-2">JavaScript II - Class 2</h1>
+<p>Topic to cover:</p>
 <ul>
-<li>Introduction CodeYourFuture</li>
-<li>Hello new students and mentors!</li>
-<li>DOM structure</li>
-<li>HTML syntax (How to work in a text editor)</li>
-<li>CSS syntax</li>
-<li>Linking to local files</li>
+<li>DOM events</li>
+<li>Callback Functions</li>
+<li>JSON</li>
+<li>Introduction to libraries: jQuery</li>
+<li>Introduction to APIs</li>
 </ul>
-<h2 id="homework">Homework</h2>
-<h3 id="read-these-chapters-from-the-front-end-handbook">Read these Chapters from the <a href="https://www.frontendhandbook.com" target="_blank">Front-end Handbook</a></h3>
+<h2 id="dom-events">DOM events</h2>
+<p>Types of Events: Mouse, Keyboard, Touch, Frame/Object, Form.
+<a href="http://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">http://www.w3schools.com/jsref/dom_obj_event.asp</a></p>
 <ul>
-<li><a href="https://www.frontendhandbook.com/what-is-a-FD.html" target="_blank">What Is a Front-End Developer?</a></li>
-<li><a href="https://www.frontendhandbook.com/practice.html" target="_blank">Part I. The Front-End Practice</a></li>
+<li>Mouse<ul>
+<li>Click, MouseOver, MouseOut</li>
 </ul>
-<h3 id="watch-these-videos">Watch these videos:</h3>
+</li>
+<li>Keyboard<ul>
+<li>KeyPress, KeyDown, KeyUp</li>
+</ul>
+</li>
+<li>Touch<ul>
+<li>TouchStart, TouchEnd, TouchMove</li>
+</ul>
+</li>
+<li>Frame<ul>
+<li>Load, Resize, Scroll</li>
+</ul>
+</li>
+<li>Form<ul>
+<li>Focus, Change, Submit</li>
+</ul>
+</li>
+</ul>
+<h3 id="define-events-as-attributes">Define events as attributes</h3>
+<p>The use of <em>onclick</em>:</p>
+<pre><code>&lt;div onclick=&quot;myFunction()&quot;&gt;Hello, click me&lt;/div&gt;
+</code></pre><h3 id="event-propagation">Event Propagation</h3>
+<p><img src="https://www.kirupa.com/html5/images/dom_capturing_72.png" alt="N|Solid"></p>
+<h2 id="callback-functions">Callback Functions</h2>
+<p>Read: <a href="http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/" target="_blank">http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/</a></p>
+<h3 id="event-listeners">Event Listeners</h3>
+<p>Read: <a href="http://www.w3schools.com/js/js_htmldom_eventlistener.asp" target="_blank">http://www.w3schools.com/js/js_htmldom_eventlistener.asp</a></p>
+<pre><code>element.addEventListener(&quot;click&quot;, myFunction);
+
+function myFunction() {
+    alert (&quot;Hello World!&quot;);
+}
+</code></pre><blockquote>
+<p><strong>In Class Excersice</strong>
+Create an interface with a menu and several buttons that, when clicked, show and hide different elements.</p>
+</blockquote>
+<h2 id="homework-1-27-november-class">Homework 1 (27 November class)</h2>
+<p>Create a flow diagram and pseudo-code for the game you coded last homework.</p>
 <ul>
-<li><a href="https://www.youtube.com/watch?v=7_LPdttKXPc" target="_blank">How the Internet Works in 5 Minutes</a></li>
-<li><a href="https://www.youtube.com/watch?v=WjDrMKZWCt0" target="_blank">How Web Browsers Work</a></li>
+<li>If you didn&apos;t code the game, this is your second chance to code it now!</li>
+<li>If you did code the game, try coding a new, more complicated game of your choice.</li>
 </ul>
-<h3 id="exercises">Exercises:</h3>
-<ul>
-<li>Khan Academy: <a href="https://www.khanacademy.org/computing/computer-programming/html-css#concept-intro" target="_blank">Into to HTML/CSS: Making webpages</a></li>
-</ul>
-<h3 id="assignment">Assignment:</h3>
+<h2 id="homework-2-4-december-class">Homework 2 (4 December class)</h2>
 <ol>
-<li><p>Set up a <a href="https://github.com" target="_blank">Github</a> account</p>
-<ul>
-<li>Create a local repository named <code>&lt;your-username&gt;.github.com</code></li>
+<li>Complete the tic-tac-toe game function to check if there&apos;s a winner.<ul>
+<li>Code is under <em>/tictactoe-game</em> in this repo.</li>
+<li>BONUS: Highlight the winning &quot;line&quot;. eg. make the 3 winning X&apos;s or O&apos;s to be red.</li>
+<li>BONUS 2: Add a button that calls a function to reset the board and restart the game.</li>
 </ul>
 </li>
-<li><p>Make your own page cloning <a href="https://instagram.com" target="_blank">Instagram</a></p>
-<ul>
-<li>At least two pages</li>
-<li>Have styles in a separate CSS file</li>
-<li>Include the following:<ul>
-<li>A homepage which is a &apos;stream&apos; of images</li>
-<li>A picture</li>
+<li>Watch video: <a href="https://m.youtube.com/watch?v=XL9Ri8pO68w" target="_blank">https://m.youtube.com/watch?v=XL9Ri8pO68w</a></li>
+<li>Create a colour changing grid:<ul>
+<li>Create a grid of at least 10x10 squares.</li>
+<li>Use <em>mouse events</em> to change the colour of each cell when you mouse over it.</li>
+<li>Use <em>mouse events</em> to change the colour back to the original when you mouse out of it.</li>
+<li>BONUS: make the color fade in and out instead of changing it instantly. Hint: use CSS classes and the property <em>transition-duration</em>.</li>
+<li>NOTE: try to change an element&apos;s <em>class</em> rather than its <em>css</em> properties. Please ask questions on the class group if you don&apos;t know where to start.</li>
 </ul>
 </li>
-<li>Make sure that you page looks nice, and that your text is readable</li>
-<li>Upload your files to Github (See below)</li>
+<li>Check reading material for next class (below) and take freeCodeCamp lessons on &quot;JSON APIs and Ajax&quot;.<ul>
+<li>You will need to learn some jQuery to do the code camp, so please ask any question you have about it.</li>
 </ul>
 </li>
 </ol>
-<h3 id="extra-material">Extra material:</h3>
-<ul>
-<li>Next week reading/ practice (these topics will be discussed next week but If you want to read ahead):<ul>
-<li>Next week we will talk about responsive web design and using media queries, if you already want to start reading about this subject check out this <a href="http://www.w3schools.com/css/css_rwd_intro.asp" target="_blank">Responsive Web Design - Introduction</a>&quot;. And take a look at this <a href="http://mediaqueri.es" target="_blank">website</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="lesson-2">Lesson 2</h2>
-<ul>
-<li>Repeat/explain how HTML is structured, go through the entire html structure, explain all different elements</li>
-<li>CSS<ul>
-<li>Tips and tricks</li>
-</ul>
-</li>
-<li>Discuss code style<ul>
-<li>Indenting code
-*</li>
-</ul>
-</li>
-<li>Media queries</li>
-<li>Understand why/ how to use which language</li>
-<li>How to work with the inspector</li>
-<li>Resume presentations</li>
-</ul>
-<h2 id="homework">Homework</h2>
-<h3 id="read">Read:</h3>
-<ul>
-<li><a href="https://teamtreehouse.com/library/css3/media-queries/introduction" target="_blank">Introduction to media queries</a></li>
-<li><a href="https://css-tricks.com/css-media-queries/" target="_blank">More about media queries</a></li>
-<li><a href="http://www.w3schools.com/html/html5_syntax.asp" target="_blank">HTML syntax</a></li>
-<li><a href="https://css-tricks.com/multiple-class-id-selectors/" target="_blank">Article about multiple ways to select classes and id&apos;s</a></li>
-<li><a href="http://www.colorcombos.com/index.html" target="_blank">Read about nice color combinations</a></li>
-</ul>
-<h3 id="exercises">Exercises</h3>
-<ul>
-<li><a href="https://www.codecademy.com/courses/web-beginner-en-6merh/0/1" target="_blank">Codecademy course on CSS Positioning</a></li>
-<li><a href="https://flukeout.github.io/" target="_blank">CSS Selector learning game</a></li>
-</ul>
-<h3 id="assignments">Assignments:</h3>
-<ol>
-<li><a href="https://github.com/Code-Your-Future/build-a-house" target="_blank">Build A House</a></li>
-<li><a href="https://github.com/Code-Your-Future/css-challenge" target="_blank">Style A Website</a></li>
-</ol>
-<h3 id="further-learning">Further Learning:</h3>
-<p>If you have completed all the assignments have a go at these:</p>
-<ul>
-<li><strong>Exercise:</strong> Udacity: <a href="https://www.udacity.com/course/responsive-web-design-fundamentals--ud893" target="_blank">Responsive web design fundamentals</a></li>
-<li><strong>Exercise:</strong> <a href="http://www.w3schools.com/css/css_rwd_intro.asp" target="_blank">Responsive Web Design - Introduction</a></li>
-</ul>
-<h2 id="lesson-3">Lesson 3</h2>
-<ul>
-<li>Presentations of students website remakes</li>
-<li>Repeat topics of last two weeks:<ul>
-<li>Understand why/ how to use which language</li>
-<li>Media-queries</li>
-<li>Responsive Websites</li>
-<li>DOM</li>
-<li>File structure, external links</li>
-</ul>
-</li>
-<li>How to find information on the web</li>
-<li>Task: find some info about a certain topic in groups of 2, present to each other<ul>
-<li>Choose one of the following subjects, look up how it works and implement it in a webpage<ul>
-<li>CSS transitions</li>
-<li>CSS animations with keyframes</li>
-<li>SVG</li>
-<li>Dropdown menu in CSS</li>
-<li>flex-box</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="homework">Homework</h2>
-<h2 id="homework">Homework</h2>
-<p>For home assignment you can build a responsive blog and get ready for javascript. Follow following <a href="assignemnt_blog.md">article</a></p>
+<h1 id="reading-for-next-class">Reading for Next Class</h1>
+<h2 id="introduction-to-libraries-jquery">Introduction to libraries: jQuery</h2>
+<p>Read: <a href="https://en.wikipedia.org/wiki/List_of_JavaScript_libraries" target="_blank">https://en.wikipedia.org/wiki/List_of_JavaScript_libraries</a>
+Read: <a href="http://www.w3schools.com/jquery/" target="_blank">http://www.w3schools.com/jquery/</a></p>
+<h2 id="json">JSON</h2>
+<p>Read: <a href="http://www.w3schools.com/js/js_json_intro.asp" target="_blank">http://www.w3schools.com/js/js_json_intro.asp</a></p>
+<blockquote>
+<p><strong>In Class Excersice</strong>
+Take the previous interface and add a JSON variable containing data. The click events now must access different parts of this data. 
+Extra: Add jQuery to your interface. Try to convert your previously written JavaScript into jQuery.</p>
+</blockquote>
+<h2 id="introduction-to-apis">Introduction to APIs</h2>
+<p>Watch: <a href="https://www.youtube.com/watch?v=s7wmiS2mSXY" target="_blank">https://www.youtube.com/watch?v=s7wmiS2mSXY</a>
+Read: <a href="https://www.mobapi.com/apis-introduction-and-context/" target="_blank">https://www.mobapi.com/apis-introduction-and-context/</a></p>
+<p><img src="https://www.mobapi.com/wp-content/uploads/2015/09/API-EN.png" alt="N|Solid"></p>
 
                                 
                                 </section>
@@ -519,12 +489,12 @@ Also we will go into the DOM and file structure. There will be time spent on why
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="../javascript-module1/" class="navigation navigation-prev " aria-label="Previous page: JavaScript I">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="./#lesson-1" class="navigation navigation-next " aria-label="Next page: Lesson 1">
+                <a href="../react-module/" class="navigation navigation-next " aria-label="Next page: React">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -535,7 +505,7 @@ Also we will go into the DOM and file structure. There will be time spent on why
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HTML/CSS","level":"1.2","depth":1,"next":{"title":"Lesson 1","level":"1.2.1","depth":2,"anchor":"#lesson-1","path":"html-css/README.md","ref":"html-css/README.md#lesson-1","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"html-css/README.md","mtime":"2017-01-30T21:49:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-30T23:20:02.340Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JavaScript II","level":"1.4","depth":1,"next":{"title":"React","level":"1.5","depth":1,"path":"react-module/README.md","ref":"react-module/README.md","articles":[{"title":"Lesson 1","level":"1.5.1","depth":2,"path":"react-module/Lesson1.md","ref":"react-module/Lesson1.md","articles":[]},{"title":"Lesson 2","level":"1.5.2","depth":2,"path":"react-module/Lesson2.md","ref":"react-module/Lesson2.md","articles":[]},{"title":"Lesson 3","level":"1.5.3","depth":2,"path":"react-module/Lesson3.md","ref":"react-module/Lesson3.md","articles":[]},{"title":"Lesson 4","level":"1.5.4","depth":2,"path":"react-module/Lesson4.md","ref":"react-module/Lesson4.md","articles":[]},{"title":"UNHCR challenge","level":"1.5.5","depth":2,"path":"react-unhcr/README.md","ref":"react-unhcr/README.md","articles":[]}]},"previous":{"title":"JavaScript I","level":"1.3","depth":1,"path":"javascript-module1/README.md","ref":"javascript-module1/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript-module2/README.md","mtime":"2017-01-30T23:07:15.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-30T23:20:02.340Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
