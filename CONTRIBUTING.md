@@ -32,5 +32,6 @@ gitbook build
 
 Publish the built `_book` directory to GitHub pages
 ```
+git commit -am 'Publish gitbook'
 git subtree push --prefix _book origin gh-pages
 ```
