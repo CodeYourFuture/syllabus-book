@@ -4,3 +4,21 @@
 [submodule "blog-challenge"]
 	path = blog-challenge
 	url = https://github.com/Code-Your-Future/blog-challenge
+[submodule "javascript-module1"]
+	path = javascript-module1
+	url = https://github.com/Code-Your-Future/javascript-module1.git
+[submodule "javascript-module2"]
+	path = javascript-module2
+	url = https://github.com/Code-Your-Future/javascript-module2.git
+[submodule "build-a-house"]
+	path = build-a-house
+	url = https://github.com/Code-Your-Future/build-a-house.git
+[submodule "css-challenge"]
+	path = css-challenge
+	url = https://github.com/Code-Your-Future/css-challenge.git
+[submodule "react-module"]
+	path = react-module
+	url = https://github.com/Code-Your-Future/react-module.git
+[submodule "react-unhcr"]
+	path = react-unhcr
+	url = https://github.com/Code-Your-Future/react-unhcr.git
