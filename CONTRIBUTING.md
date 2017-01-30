@@ -16,7 +16,7 @@ changes have landed into the `master` branch of that repository.
 
 Pull the latest syllabus modules:
 ```
-git submodule update --init --recursive
+git submodule update --init --remote --recursive
 ```
 
 Test your changes:
