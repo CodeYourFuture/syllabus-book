@@ -12,7 +12,6 @@ Our 6-month web development programme follows the success of our affiliate organ
 **This documentation is work in progress**.
 
 - Write intro
-- Merge [javascript-module1/first-material](https://github.com/Code-Your-Future/javascript-module1/tree/first-material)?
 - Agree on a format for course materials
 - Rewrite git repositories to new format
 - Add links from READMEs to repositories for homework
