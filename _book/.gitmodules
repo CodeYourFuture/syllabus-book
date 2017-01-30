@@ -1,6 +1,6 @@
 [submodule "html-css"]
 	path = html-css
-	url = git@github.com:Code-Your-Future/HTML-CSS.git
+	url = https://github.com/Code-Your-Future/HTML-CSS.git
 [submodule "blog-challenge"]
 	path = blog-challenge
 	url = https://github.com/Code-Your-Future/blog-challenge
