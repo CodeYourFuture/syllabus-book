@@ -30,6 +30,8 @@ gitbook serve
 open http://localhost:4000
 ```
 
+⚠️ If you see the error `Failed to load prism syntax: sh` in your shell, this is because the Prism syntax highligting plugin does not understand the `sh` syntax prefix in your markdown code samples. To work around the issue, rename `sh` syntax prefixes to `bash`. Support for `sh` syntax should be added to Prism [soon](https://github.com/gaearon/gitbook-plugin-prism/pull/19).
+
 Build the docsite into the `_book` directory
 ```
 gitbook build
