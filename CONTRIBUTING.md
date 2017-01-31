@@ -7,8 +7,13 @@ To contribute to the Code Your Future syllabus, fork and open a pull request to
 ## Publish the Gitbook
 
 Install the [GitBook](https://github.com/GitbookIO/gitbook) CLI:
-```sh
+```bash
 npm install -g gitbook-cli
+```
+
+Install gitbook plugins for this project, if not already installed:
+```bash
+gitbook install
 ```
 
 If the changes you want to publish are in one of the modules, make sure your
