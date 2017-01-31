@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
                 
             
                 
@@ -419,70 +419,70 @@
 <p>React components are best understood in terms of parents and children.</p>
 <p>Parent or <code>container</code> components may have access to the data that they need in order to pass on to multiple child components. These larger components often contain the actions (e.g. API calls) or data processing functions that their child components require and thus are referred to as <code>smart</code> components.</p>
 <p>Example:</p>
-<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
-<span class="hljs-keyword">import</span> Organisation <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Organisation&apos;</span>;
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Organisation <span class="token keyword">from</span> <span class="token string">&apos;./Organisation&apos;</span><span class="token punctuation">;</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  render() {
-    <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;App&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">Organisation</span>
-            <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;Refugee Support Network&quot;</span>
-            <span class="hljs-attr">website</span>=<span class="hljs-string">&quot;http://www.refugeesupportnetwork.org&quot;</span>
-        /&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    );
-  }
-}
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>App<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Organisation</span>
+            <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Refugee</span> <span class="token attr-name">Support</span> <span class="token attr-name">Network&quot;</span>
+            <span class="token attr-name">website</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://www.refugeesupportnetwork.org<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-export default App;
-</span></code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
 <p>Child or <code>presentational</code> components are essentially smaller customisable to the data that they receive but usually do not have the data in themselves. These are often referred to as <code>dumb</code> components - because they do not process the data in themselves:</p>
-<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Organisation</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  render() {
-    <span class="hljs-keyword">const</span> name = <span class="hljs-keyword">this</span>.props.name;
-    <span class="hljs-keyword">const</span> website = <span class="hljs-keyword">this</span>.props.website;
-    <span class="hljs-keyword">return</span> (
-        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-            Name: {name} <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-            Website: {website}
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    );
-  }
-}
+<span class="token keyword">class</span> <span class="token class-name">Organisation</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> website <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>website<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+            Name<span class="token punctuation">:</span> <span class="token punctuation">{</span>name<span class="token punctuation">}</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/&gt;</span></span>
+            Website<span class="token punctuation">:</span> <span class="token punctuation">{</span>website<span class="token punctuation">}</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-export default Organisation;
-</span></code></pre>
+<span class="token keyword">export</span> <span class="token keyword">default</span> Organisation<span class="token punctuation">;</span>
+</code></pre>
 <ul>
 <li><a href="https://jsfiddle.net/kabaros/1h9taf1e/" target="_blank">Props exercise</a></li>
 </ul>
 <h2 id="jsx-map-arrays-to-components">JSX: Map Arrays to Components</h2>
 <p>When working with APIs we often have collections of things in <code>Arrays</code> which we want to map to components. This means we can loop through that data and display the customisable <code>dumb</code> component for each one.</p>
-<pre><code class="lang-jsx">
-renderOrganisations() {
-    <span class="hljs-keyword">const</span> orgData = [{ name: <span class="hljs-string">&apos;Organisation 1&apos;</span>, borough: <span class="hljs-string">&apos;Camden&apos;</span>}, {name: <span class="hljs-string">&apos;Organisation 2&apos;</span>}];
-    <span class="hljs-keyword">return</span> orgData.map(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderData</span>(<span class="hljs-params">organisation</span>) </span>{
-        <span class="hljs-keyword">return</span> (
-            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Organisation</span>
-                <span class="hljs-attr">name</span>= {<span class="hljs-attr">organisation.name</span>}
-                <span class="hljs-attr">borough</span>=<span class="hljs-string">{organisation.borough</span> ? <span class="hljs-attr">organisation.borough</span> <span class="hljs-attr">:</span> &apos;<span class="hljs-attr">None</span>&apos;}
-                <span class="hljs-attr">website</span>= {<span class="hljs-attr">organisation.website</span>}
-            /&gt;</span>
-        )
-    });
-}
-class App extends Component {
-  render() {
-      return (
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;App&quot;</span>&gt;</span>
-          {this.renderOrganisations()}
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      );
-  }
-}
-</span></code></pre>
+<pre class="language-"><code class="lang-jsx">
+<span class="token function">renderOrganisations</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> orgData <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">&apos;Organisation 1&apos;</span><span class="token punctuation">,</span> borough<span class="token punctuation">:</span> <span class="token string">&apos;Camden&apos;</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>name<span class="token punctuation">:</span> <span class="token string">&apos;Organisation 2&apos;</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> orgData<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">renderData</span><span class="token punctuation">(</span>organisation<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>Organisation
+                name<span class="token operator">=</span> <span class="token punctuation">{</span>organisation<span class="token punctuation">.</span>name<span class="token punctuation">}</span>
+                borough<span class="token operator">=</span><span class="token punctuation">{</span>organisation<span class="token punctuation">.</span>borough <span class="token operator">?</span> organisation<span class="token punctuation">.</span>borough <span class="token punctuation">:</span> <span class="token string">&apos;None&apos;</span><span class="token punctuation">}</span>
+                website<span class="token operator">=</span> <span class="token punctuation">{</span>organisation<span class="token punctuation">.</span>website<span class="token punctuation">}</span>
+            <span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>App<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">renderOrganisations</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <ul>
 <li><a href="https://codepen.io/kabaros/pen/BpLzzE?editors=0010#0" target="_blank">Mapping Exercise</a></li>
 </ul>
@@ -491,34 +491,34 @@ class App extends Component {
 <p>Props are a Compenent&apos;s configuration, they are received from above and they don&apos;t usually change by the component itself.
 State starts with a default value (set in the constructor typically) then it gets changed (mutated) by events of the application (user interactions, form input, API calls etc..)</p>
 <p>Example:</p>
-<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
-<span class="hljs-keyword">import</span> Organisation <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Organisation&apos;</span>;
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Organisation <span class="token keyword">from</span> <span class="token string">&apos;./Organisation&apos;</span><span class="token punctuation">;</span>
 
-<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  <span class="hljs-keyword">constructor</span>(props) {
-    <span class="hljs-keyword">super</span>(props);
-    <span class="hljs-keyword">this</span>.state = {
-        website: <span class="hljs-literal">null</span>
-    }
-  }
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+        website<span class="token punctuation">:</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
 
-  handleChange(event) {
-    <span class="hljs-keyword">this</span>.setState({website: event.target.value});
-  }
-  render() {
-    <span class="hljs-keyword">return</span> (
-      &lt;div className=&quot;App&quot;&gt;
-        &lt;Organisation
-            name=&quot;Refugee Support Network&quot;
-            website={this.state.website}
-        /&gt;
-        &lt;input type=&quot;text&quot; value={this.state.website} onChange={this.handleChange.bind(this)} /&gt;
-      &lt;/div&gt;
-    );
-  }
-}
+  <span class="token function">handleChange</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>website<span class="token punctuation">:</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>App<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Organisation</span>
+            <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Refugee</span> <span class="token attr-name">Support</span> <span class="token attr-name">Network&quot;</span>
+            <span class="token attr-name">website</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>website<span class="token punctuation">}</span></span>
+        <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>website<span class="token punctuation">}</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleChange<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-export default App;
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
 </code></pre>
 <ul>
 <li><a href="https://codepen.io/kabaros/pen/NdRNmm?editors=0010#0" target="_blank">State Exercise</a></li>
@@ -554,21 +554,21 @@ export default App;
 <p>The complete list of these methods with their descriptions can be found in the documentation <a href="https://facebook.github.io/react/docs/react-component.html" target="_blank">here</a>.</p>
 <h2 id="api-calls">API calls</h2>
 <p>In order to make an API called you can call the functions same</p>
-<pre><code class="lang-jsx">callAPI = () =&gt; {
-    <span class="hljs-keyword">const</span> APIAddress = <span class="hljs-string">&apos;https://code-your-future.github.io/api-demo/area/All/index.json&apos;</span>;
-    fetch(APIAddress)
-    .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
-      <span class="hljs-keyword">return</span> response.json();
-    })
-    .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">jsonData</span>) </span>{
-      <span class="hljs-keyword">this</span>.setState({ orgData: jsonData });
-    });
-}
+<pre class="language-"><code class="lang-jsx">callAPI <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> APIAddress <span class="token operator">=</span> <span class="token string">&apos;https://code-your-future.github.io/api-demo/area/All/index.json&apos;</span><span class="token punctuation">;</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span>APIAddress<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>jsonData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> orgData<span class="token punctuation">:</span> jsonData <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>In order to use this function when the component first loads we will call it in the <code>componentDidMount()</code> lifecycle method.</p>
-<pre><code class="lang-jsx">componentDidMount() {
-    <span class="hljs-keyword">this</span>.callAPI();
-}
+<pre class="language-"><code class="lang-jsx"><span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">callAPI</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>Once the state is updated with the data, your component will re-render.</p>
 <h2 id="homework">Homework</h2>
@@ -618,7 +618,7 @@ export default App;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lesson 2","level":"1.5.2","depth":2,"next":{"title":"Lesson 3","level":"1.5.3","depth":2,"path":"react-module/Lesson3.md","ref":"react-module/Lesson3.md","articles":[]},"previous":{"title":"Lesson 1","level":"1.5.1","depth":2,"path":"react-module/Lesson1.md","ref":"react-module/Lesson1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react-module/Lesson2.md","mtime":"2017-01-30T23:13:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-30T23:36:55.854Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Lesson 2","level":"1.5.2","depth":2,"next":{"title":"Lesson 3","level":"1.5.3","depth":2,"path":"react-module/Lesson3.md","ref":"react-module/Lesson3.md","articles":[]},"previous":{"title":"Lesson 1","level":"1.5.1","depth":2,"path":"react-module/Lesson1.md","ref":"react-module/Lesson1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react-module/Lesson2.md","mtime":"2017-01-30T23:13:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-31T01:49:00.450Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

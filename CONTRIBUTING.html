@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-tomorrow.css">
                 
             
                 
@@ -416,23 +416,27 @@
 <a href="https://github.com/code-your-future/syllabus" target="_blank">submodules</a>.</p>
 <h2 id="publish-the-gitbook">Publish the Gitbook</h2>
 <p>Install the <a href="https://github.com/GitbookIO/gitbook" target="_blank">GitBook</a> CLI:</p>
-<pre><code class="lang-sh">npm install -g gitbook-cli
+<pre class="language-"><code class="lang-bash">npm <span class="token function">install</span> -g gitbook-cli
+</code></pre>
+<p>Install gitbook plugins for this project, if not already installed:</p>
+<pre class="language-"><code class="lang-bash">gitbook <span class="token function">install</span>
 </code></pre>
 <p>If the changes you want to publish are in one of the modules, make sure your
 changes have landed into the <code>master</code> branch of that repository.</p>
 <p>Pull the latest syllabus modules:</p>
-<pre><code>git submodule update --init --remote --recursive
+<pre class="language-"><code>git submodule update --init --remote --recursive
 </code></pre><p>Test your changes:</p>
-<pre><code>gitbook serve
+<pre class="language-"><code>gitbook serve
 open http://localhost:4000
-</code></pre><p>Build the docsite into the <code>_book</code> directory</p>
-<pre><code>gitbook build
+</code></pre><p>&#x26A0;&#xFE0F; If you see the error <code>Failed to load prism syntax: sh</code> in your shell, this is because the Prism syntax highligting plugin does not understand the <code>sh</code> syntax prefix in your markdown code samples. To work around the issue, rename <code>sh</code> syntax prefixes to <code>bash</code>. Support for <code>sh</code> syntax should be added to Prism <a href="https://github.com/gaearon/gitbook-plugin-prism/pull/19" target="_blank">soon</a>.</p>
+<p>Build the docsite into the <code>_book</code> directory</p>
+<pre class="language-"><code>gitbook build
 </code></pre><p>Publish the built <code>_book</code> directory to GitHub pages</p>
-<pre><code>git commit -am &apos;Publish gitbook&apos;
+<pre class="language-"><code>git commit -am &apos;Publish gitbook&apos;
 git subtree push --prefix _book origin gh-pages
 </code></pre><h2 id="add-new-modules">Add new modules</h2>
 <p>Add a git submodule: (use <code>https</code> in favour of <code>git</code> urls for consitency, but remember the trailing <code>.git</code>)</p>
-<pre><code>git submodule add https://github.com/Code-Your-Future/new-repository.git
+<pre class="language-"><code>git submodule add https://github.com/Code-Your-Future/new-repository.git
 </code></pre><p>Add a new entry in <a href="https://github.com/Code-Your-Future/syllabus/blob/master/SUMMARY.md" target="_blank">SUMMARY.md</a>.
 If the module contains many individual markdown files, add them as nested bullets under the main README.</p>
 <p><a href="#publish-the-gitbook">Build and publish</a> the site.</p>
@@ -475,7 +479,7 @@ If the module contains many individual markdown files, add them as nested bullet
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Contributing","level":"1.6","depth":1,"previous":{"title":"UNHCR challenge","level":"1.5.5","depth":2,"path":"react-unhcr/README.md","ref":"react-unhcr/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CONTRIBUTING.md","mtime":"2017-01-30T23:36:40.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-30T23:36:55.854Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Contributing","level":"1.6","depth":1,"previous":{"title":"UNHCR challenge","level":"1.5.5","depth":2,"path":"react-unhcr/README.md","ref":"react-unhcr/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CONTRIBUTING.md","mtime":"2017-01-31T01:47:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-31T01:49:00.450Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
