@@ -427,44 +427,43 @@
 <p><a href="https://nodejs.org/en/" target="_blank">Node</a> is a runtime for Javascript which allows you to run Javascript code on your computer and servers, in addition to the client side/browser.</p>
 <p>In order to install it you need to get the installer <a href="https://nodejs.org/en/" target="_blank">Node</a> and then you will have access to thousands of libraries on <a href="https://www.npmjs.com/" target="_blank">npm</a>.</p>
 <p>Once it is installed you can use it like this:</p>
-<pre class="language-"><code class="lang-sh">npm install -g create-react-app
+<pre class="language-"><code class="lang-sh">npm <span class="token function">install</span> -g create-react-app
 
 create-react-app my-app
-cd my-app/
+<span class="token function">cd</span> my-app/
 npm start
 </code></pre>
 <h2 id="react">React</h2>
 <p><a href="https://facebook.github.io/react/" target="_blank">React</a> is a library by Facebook.</p>
 <ul>
-<li>Uses <a href="https://facebook.github.io/react/docs/introducing-jsx.html" target="_blank">JSX</a>
-```jsx
-import React, { Component } from &apos;react&apos;;</li>
+<li>Uses <a href="https://facebook.github.io/react/docs/introducing-jsx.html" target="_blank">JSX</a></li>
 </ul>
-<p>class App extends Component {
-  render() {</p>
-<pre class="language-"><code>return (
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>App<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
-    Hello World!
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-);
-</code></pre><p>  }
-}</p>
-<p>export default App;</p>
-<pre class="language-"><code>
-- Many good Patterns: Single Responsibility, DRY, abstraction of state
+<pre class="language-"><code class="lang-jsx"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span><span class="token punctuation">;</span>
 
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>App<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        Hello World<span class="token operator">!</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-Let&apos;s create an app!
----
-
-```sh
-npm install -g create-react-app
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>Many good Patterns: Single Responsibility, DRY, abstraction of state</li>
+</ul>
+<h2 id="lets-create-an-app">Let&apos;s create an app!</h2>
+<pre class="language-"><code class="lang-bash">npm <span class="token function">install</span> -g create-react-app
 
 create-react-app my-app
-cd my-app/
+<span class="token function">cd</span> my-app/
 npm start
-</code></pre><h2 id="es6">ES6</h2>
+</code></pre>
+<h2 id="es6">ES6</h2>
 <p>ES6 is a new standard for Javascript (ECMAScript). It is already supported in many browsers (check compatibility <a href="https://kangax.github.io/compat-table/es6/" target="_blank">here</a>).</p>
 <p>Some useful features:</p>
 <ul>
@@ -522,7 +521,7 @@ npm start
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Lesson 1","level":"1.5.1","depth":2,"next":{"title":"Lesson 2","level":"1.5.2","depth":2,"path":"react-module/Lesson2.md","ref":"react-module/Lesson2.md","articles":[]},"previous":{"title":"React","level":"1.5","depth":1,"path":"react-module/README.md","ref":"react-module/README.md","articles":[{"title":"Lesson 1","level":"1.5.1","depth":2,"path":"react-module/Lesson1.md","ref":"react-module/Lesson1.md","articles":[]},{"title":"Lesson 2","level":"1.5.2","depth":2,"path":"react-module/Lesson2.md","ref":"react-module/Lesson2.md","articles":[]},{"title":"Lesson 3","level":"1.5.3","depth":2,"path":"react-module/Lesson3.md","ref":"react-module/Lesson3.md","articles":[]},{"title":"Lesson 4","level":"1.5.4","depth":2,"path":"react-module/Lesson4.md","ref":"react-module/Lesson4.md","articles":[]},{"title":"UNHCR challenge","level":"1.5.5","depth":2,"path":"react-unhcr/README.md","ref":"react-unhcr/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react-module/Lesson1.md","mtime":"2017-01-30T23:13:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-31T01:49:00.450Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Lesson 1","level":"1.5.1","depth":2,"next":{"title":"Lesson 2","level":"1.5.2","depth":2,"path":"react-module/Lesson2.md","ref":"react-module/Lesson2.md","articles":[]},"previous":{"title":"React","level":"1.5","depth":1,"path":"react-module/README.md","ref":"react-module/README.md","articles":[{"title":"Lesson 1","level":"1.5.1","depth":2,"path":"react-module/Lesson1.md","ref":"react-module/Lesson1.md","articles":[]},{"title":"Lesson 2","level":"1.5.2","depth":2,"path":"react-module/Lesson2.md","ref":"react-module/Lesson2.md","articles":[]},{"title":"Lesson 3","level":"1.5.3","depth":2,"path":"react-module/Lesson3.md","ref":"react-module/Lesson3.md","articles":[]},{"title":"Lesson 4","level":"1.5.4","depth":2,"path":"react-module/Lesson4.md","ref":"react-module/Lesson4.md","articles":[]},{"title":"UNHCR challenge","level":"1.5.5","depth":2,"path":"react-unhcr/README.md","ref":"react-unhcr/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react-module/Lesson1.md","mtime":"2017-02-06T16:14:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-06T16:15:12.100Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -530,6 +529,10 @@ npm start
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
