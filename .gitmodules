@@ -22,3 +22,6 @@
 [submodule "react-unhcr"]
 	path = react-unhcr
 	url = https://github.com/Code-Your-Future/react-unhcr.git
+[submodule "javascript-module3"]
+	path = javascript-module3
+	url = https://github.com/Code-Your-Future/javascript-module3.git

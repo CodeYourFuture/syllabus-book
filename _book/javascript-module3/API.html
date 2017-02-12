@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Blog challenge · GitBook</title>
+        <title>APIs · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../css-challenge/" />
+    <link rel="next" href="FORMS.html" />
     
     
-    <link rel="prev" href="../build-a-house/" />
+    <link rel="prev" href="JSON.html" />
     
 
     </head>
@@ -168,9 +168,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.5" data-path="./">
+        <li class="chapter " data-level="1.2.5" data-path="../blog-challenge/">
             
-                <a href="./">
+                <a href="../blog-challenge/">
             
                     
                     Blog challenge
@@ -270,9 +270,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../javascript-module3/">
+        <li class="chapter " data-level="1.5" data-path="./">
             
-                <a href="../javascript-module3/">
+                <a href="./">
             
                     
                     JavaScript III
@@ -284,9 +284,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../javascript-module3/JSON.html">
+        <li class="chapter " data-level="1.5.1" data-path="JSON.html">
             
-                <a href="../javascript-module3/JSON.html">
+                <a href="JSON.html">
             
                     
                     JSON
@@ -297,9 +297,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../javascript-module3/API.html">
+        <li class="chapter active" data-level="1.5.2" data-path="API.html">
             
-                <a href="../javascript-module3/API.html">
+                <a href="API.html">
             
                     
                     APIs
@@ -310,9 +310,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../javascript-module3/FORMS.html">
+        <li class="chapter " data-level="1.5.3" data-path="FORMS.html">
             
-                <a href="../javascript-module3/FORMS.html">
+                <a href="FORMS.html">
             
                     
                     Forms
@@ -323,9 +323,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="../javascript-module3/CALLBACKS.html">
+        <li class="chapter " data-level="1.5.4" data-path="CALLBACKS.html">
             
-                <a href="../javascript-module3/CALLBACKS.html">
+                <a href="CALLBACKS.html">
             
                     
                     Callbacks
@@ -336,9 +336,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="../javascript-module3/HOMEWORK.html">
+        <li class="chapter " data-level="1.5.5" data-path="HOMEWORK.html">
             
-                <a href="../javascript-module3/HOMEWORK.html">
+                <a href="HOMEWORK.html">
             
                     
                     Homework
@@ -481,7 +481,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Blog challenge</a>
+        <a href=".." >APIs</a>
     </h1>
 </div>
 
@@ -496,49 +496,89 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="assignment">Assignment</h1>
-<h2 id="practice-html">Practice HTML</h2>
+                                <h2 id="apis">APIs</h2>
 <ul>
-<li>Make first letter in the paragraph larger then the rest?</li>
-<li>Change background colour of every second paragraph to e.g. grey</li>
+<li><a href="https://zapier.com/learn/apis/" target="_blank">Zapier course</a></li>
 </ul>
-<h2 id="build-a-blog">Build a Blog</h2>
-<p>Build a publishing web page that will have following elements:</p>
-<ul>
-<li>title</li>
-<li>navigation</li>
-<li>sections (as a topics for the blog e.g. technology, food recipes, ...)<ul>
-<li>articles</li>
-</ul>
-</li>
-<li>side bar (with information about you)</li>
-<li>footer</li>
-</ul>
-<p>Apply following:</p>
-<ul>
-<li><a href="http://www.w3schools.com/css/css_rwd_mediaqueries.asp" target="_blank">media queries</a>; For for finding breakpoints you can reference article <a href="https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints" target="_blank">MEDIA QUERIES FOR COMMON DEVICE BREAKPOINTS</a>. Please make sure that this page is correctly displayed on at least:<ul>
-<li>laptops</li>
-<li>iPad</li>
-<li>iPhone</li>
-</ul>
-</li>
-<li>responsive grid made with float left</li>
-</ul>
-<p>optional:</p>
-<ul>
-<li>flex box look at css tricks <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox" target="_blank">article</a></li>
-</ul>
-<p>You can, but don&apos;t have to use below layout:</p>
-<p><img src="blog.png" alt="alt text" title="Blog mockup"></p>
-<h3 id="instructions">Instructions</h3>
+<p>API stands for Application Programming Interface, it as a way for programs to talk to each other, and exchange information.</p>
+<p>Normally this involves a &apos;client&apos; (your browser) asking a &apos;server&apos; for information, the server then returns a response (usually in JSON).
+<img src="images/request-response-cycle.gif" alt=""></p>
+<p>To use an API, we send HTTP requests.
+A HTTP request is made up of 4 things:</p>
 <ol>
-<li>Fork this repository. You can follow instructions in the <a href="https://github.com/Code-Your-Future/guides/blob/master/forking-and-cloning/README.md" target="_blank">article</a> and let us know on Slack if you have any troubles.</li>
-<li>Write code for the blog. Use index.html, style.css, pictures, or other assets. You can use mockup of the page on the image above. You can extend existing index.html and style.css or use your own.</li>
-<li>When you are finished, submit Pull Request.</li>
+<li>URL (Uniform Resource Locator)<ul>
+<li>The location of data we want, e.g. <a href="http://www.google.com/" target="_blank">http://www.google.com/</a></li>
+</ul>
+</li>
+<li>Method<ul>
+<li>Information about what we want to do with the data<ul>
+<li>GET: Get the data from the server</li>
+<li>POST: Change the data</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>List of Headers<ul>
+<li>Extra information the server might want. (Don&apos;t worry about this for now)</li>
+</ul>
+</li>
+<li>Body<ul>
+<li>If we are sending a POST request, we can put the data we want to change inside the body</li>
+</ul>
+</li>
 </ol>
-<h2 id="get-ready-for-javascript">Get ready for JavaScript</h2>
-<p>What is javascript? Watch <a href="https://www.youtube.com/watch?v=nItSSTwBvSU" target="_blank">video</a></p>
-<p>Complete exercises on <a href="https://www.sololearn.com/Course/JavaScript/" target="_blank">sololearn</a> up to module <strong>3</strong>.</p>
+<p>Once you have made a request, the server will return a response.
+Responses contain two main things:</p>
+<ol>
+<li>Status Code<ul>
+<li>A number that represents the status of the response<ul>
+<li>200 = OK</li>
+<li>400 = Bad request</li>
+<li>404 = Not found</li>
+</ul>
+</li>
+<li>Full list: <a href="http://www.restapitutorial.com/httpstatuscodes.html" target="_blank">http://www.restapitutorial.com/httpstatuscodes.html</a></li>
+</ul>
+</li>
+<li>Body<ul>
+<li>Normally this is the JSON data you requested</li>
+</ul>
+</li>
+</ol>
+<h2 id="performing-http-requests-in-javascript">Performing HTTP requests in JavaScript</h2>
+<ul>
+<li><a href="http://www.w3schools.com/xml/ajax_intro.asp" target="_blank">w3schools documentation on XMLHttpRequest</a></li>
+</ul>
+<pre class="language-"><code class="lang-JavaScript">var http = new XMLHttpRequest()
+
+// Specify the Method and the URL we want to access
+http.open(&apos;GET&apos;, &apos;http://www.mocky.io/v2/584c3d2d1200001b1e372b01&apos;)
+
+// Function to be called as the request happens
+http.onreadystatechange = function() {
+    // readyState === 4 means the request has finished (http://www.w3schools.com/xml/ajax_xmlhttprequest_response.asp)
+    // status === 200  means the request was OK
+    if (this.readyState === 4 &amp;&amp; this.status === 200) {
+        console.log(this.responseText); // The body returned by the server (as a string)
+    }
+}
+
+http.send(); // Make the request
+</code></pre>
+<h2 id="rest">REST</h2>
+<p>REST stands for Representational State Transfer. It is a method of organising APIs, in a consistent way.</p>
+<p><a href="https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340" target="_blank">https://code.tutsplus.com/tutorials/a-beginners-guide-to-http-and-rest--net-16340</a></p>
+<h2 id="exercise">Exercise</h2>
+<ol>
+<li><p>Call <a href="http://www.mocky.io/v2/584c3d2d1200001b1e372b01" target="_blank">http://www.mocky.io/v2/584c3d2d1200001b1e372b01</a> and display the contents of &apos;data&apos;</p>
+</li>
+<li><p>Call <a href="https://jsonplaceholder.typicode.com/posts" target="_blank">https://jsonplaceholder.typicode.com/posts</a> and display the title of the posts.
+ Using the &apos;id&apos; field in the posts, when a user clicks on a title, make a second request to <code>https://jsonplaceholder.typicode.com/posts/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span></code> (where <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">&gt;</span></span></code> is the number from the post), and display the body and the title of the post (from the response)</p>
+</li>
+</ol>
+<h2 id="extra">Extra</h2>
+<p>Watch: <a href="https://www.youtube.com/watch?v=s7wmiS2mSXY" target="_blank">https://www.youtube.com/watch?v=s7wmiS2mSXY</a>
+Read: <a href="https://www.mobapi.com/apis-introduction-and-context/" target="_blank">https://www.mobapi.com/apis-introduction-and-context/</a></p>
 
                                 
                                 </section>
@@ -566,12 +606,12 @@
 
             
                 
-                <a href="../build-a-house/" class="navigation navigation-prev " aria-label="Previous page: Build a house">
+                <a href="JSON.html" class="navigation navigation-prev " aria-label="Previous page: JSON">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../css-challenge/" class="navigation navigation-next " aria-label="Next page: CSS challenge">
+                <a href="FORMS.html" class="navigation navigation-next " aria-label="Next page: Forms">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -582,7 +622,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Blog challenge","level":"1.2.5","depth":2,"next":{"title":"CSS challenge","level":"1.2.6","depth":2,"path":"css-challenge/README.md","ref":"css-challenge/README.md","articles":[]},"previous":{"title":"Build a house","level":"1.2.4","depth":2,"path":"build-a-house/README.md","ref":"build-a-house/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"blog-challenge/README.md","mtime":"2017-02-12T14:20:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-12T15:55:08.718Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"APIs","level":"1.5.2","depth":2,"next":{"title":"Forms","level":"1.5.3","depth":2,"path":"javascript-module3/FORMS.md","ref":"javascript-module3/FORMS.md","articles":[]},"previous":{"title":"JSON","level":"1.5.1","depth":2,"path":"javascript-module3/JSON.md","ref":"javascript-module3/JSON.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript-module3/API.md","mtime":"2017-02-12T14:30:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-12T15:55:08.718Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
