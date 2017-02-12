@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Blog challenge · GitBook</title>
+        <title>Callbacks · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../css-challenge/" />
+    <link rel="next" href="HOMEWORK.html" />
     
     
-    <link rel="prev" href="../build-a-house/" />
+    <link rel="prev" href="FORMS.html" />
     
 
     </head>
@@ -168,9 +168,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.5" data-path="./">
+        <li class="chapter " data-level="1.2.5" data-path="../blog-challenge/">
             
-                <a href="./">
+                <a href="../blog-challenge/">
             
                     
                     Blog challenge
@@ -270,9 +270,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../javascript-module3/">
+        <li class="chapter " data-level="1.5" data-path="./">
             
-                <a href="../javascript-module3/">
+                <a href="./">
             
                     
                     JavaScript III
@@ -284,9 +284,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../javascript-module3/JSON.html">
+        <li class="chapter " data-level="1.5.1" data-path="JSON.html">
             
-                <a href="../javascript-module3/JSON.html">
+                <a href="JSON.html">
             
                     
                     JSON
@@ -297,9 +297,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../javascript-module3/API.html">
+        <li class="chapter " data-level="1.5.2" data-path="API.html">
             
-                <a href="../javascript-module3/API.html">
+                <a href="API.html">
             
                     
                     APIs
@@ -310,9 +310,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../javascript-module3/FORMS.html">
+        <li class="chapter " data-level="1.5.3" data-path="FORMS.html">
             
-                <a href="../javascript-module3/FORMS.html">
+                <a href="FORMS.html">
             
                     
                     Forms
@@ -323,9 +323,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="../javascript-module3/CALLBACKS.html">
+        <li class="chapter active" data-level="1.5.4" data-path="CALLBACKS.html">
             
-                <a href="../javascript-module3/CALLBACKS.html">
+                <a href="CALLBACKS.html">
             
                     
                     Callbacks
@@ -336,9 +336,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="../javascript-module3/HOMEWORK.html">
+        <li class="chapter " data-level="1.5.5" data-path="HOMEWORK.html">
             
-                <a href="../javascript-module3/HOMEWORK.html">
+                <a href="HOMEWORK.html">
             
                     
                     Homework
@@ -481,7 +481,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Blog challenge</a>
+        <a href=".." >Callbacks</a>
     </h1>
 </div>
 
@@ -496,49 +496,149 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="assignment">Assignment</h1>
-<h2 id="practice-html">Practice HTML</h2>
+                                <h2 id="callbacks-and-promises">Callbacks and Promises</h2>
 <ul>
-<li>Make first letter in the paragraph larger then the rest?</li>
-<li>Change background colour of every second paragraph to e.g. grey</li>
+<li><a href="http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/" target="_blank">Understand JavaScript Callback Functions and Use Them</a></li>
+<li><a href="https://medium.freecodecamp.com/javascript-callbacks-explained-using-minions-da272f4d9bcd#.83dht6ta8" target="_blank">JavaScript Callbacks Explained Using Minions </a></li>
 </ul>
-<h2 id="build-a-blog">Build a Blog</h2>
-<p>Build a publishing web page that will have following elements:</p>
+<p>Callbacks are functions, that are called once another function has completed.
+They are used to allow you code to run in the background (asynchronously).</p>
+<p>We have already seen an example of this when working with APIs.
+The <code>request.onreadystatechange</code> is a callback function.</p>
+<pre class="language-"><code class="lang-JavaScript">function finished() {
+    alert(&apos;The task has finished&apos;);
+}
+
+function thingThatTakesALongTime(callback) {
+    //... Task that takes a long time to complete
+
+    callback(); // This is where the &apos;alert&apos; happens
+}
+
+// Pass the function to &apos;thingThatTakesALongTime&apos; just like a normal variable
+thingThatTakesALongTime(finished);
+</code></pre>
+<p>Sometimes callbacks are used, so you can handle errors separately.</p>
+<pre class="language-"><code class="lang-JavaScript">function handleError(problem) {
+    alert(&apos;There was an error: &apos; + problem);
+}
+
+function task(x, errorCallback) {
+    if (x !== 0) {
+        errorCallback(&apos;X is not 0!&apos;)
+        return;
+    }
+    return x + 100;
+}
+
+task(0, handleError); // Causes an alert to appear
+task(1, handleError); // Returns 101
+</code></pre>
+<h2 id="asynchronous-functions">Asynchronous functions</h2>
 <ul>
-<li>title</li>
-<li>navigation</li>
-<li>sections (as a topics for the blog e.g. technology, food recipes, ...)<ul>
-<li>articles</li>
+<li><a href="http://www.w3schools.com/jsref/met_win_settimeout.asp" target="_blank">w3schools</a></li>
 </ul>
-</li>
-<li>side bar (with information about you)</li>
-<li>footer</li>
-</ul>
-<p>Apply following:</p>
+<p>So far everything you have been doing has been synchronous.
+This means your code is executed one line at a time, in order.
+Asynchronous code is not executed in order, and can run at any time, in any order.</p>
+<p>An example of this in real life, are phone calls and text messages.</p>
 <ul>
-<li><a href="http://www.w3schools.com/css/css_rwd_mediaqueries.asp" target="_blank">media queries</a>; For for finding breakpoints you can reference article <a href="https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints" target="_blank">MEDIA QUERIES FOR COMMON DEVICE BREAKPOINTS</a>. Please make sure that this page is correctly displayed on at least:<ul>
-<li>laptops</li>
-<li>iPad</li>
-<li>iPhone</li>
+<li>Phone calls are <code>synchronous</code> because you cant (really) do anything while the other person is speaking.
+  You are always waiting for your turn to respond</li>
+<li>Text messages are <code>asynchronous</code>.
+  When you send a text, you can go away and do something else, until the other person responds.</li>
 </ul>
-</li>
-<li>responsive grid made with float left</li>
-</ul>
-<p>optional:</p>
-<ul>
-<li>flex box look at css tricks <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox" target="_blank">article</a></li>
-</ul>
-<p>You can, but don&apos;t have to use below layout:</p>
-<p><img src="blog.png" alt="alt text" title="Blog mockup"></p>
-<h3 id="instructions">Instructions</h3>
+<p>A simple example is <code>setTimeout</code>.
+This allows you to run a function after a given time period.
+The first argument is the function you want to run, the second argument is the <code>delay</code> (in milliseconds)</p>
+<pre class="language-"><code class="lang-JavaScript">
+function myFunction() {
+    console.log(&apos;Hello world!&apos;);
+}
+
+setTimeout(myFunction, 1000);
+setTimeout(function() { console.log(&apos;Goodbye world!&apos;); }, 500)
+</code></pre>
+<p>Exercise:</p>
 <ol>
-<li>Fork this repository. You can follow instructions in the <a href="https://github.com/Code-Your-Future/guides/blob/master/forking-and-cloning/README.md" target="_blank">article</a> and let us know on Slack if you have any troubles.</li>
-<li>Write code for the blog. Use index.html, style.css, pictures, or other assets. You can use mockup of the page on the image above. You can extend existing index.html and style.css or use your own.</li>
-<li>When you are finished, submit Pull Request.</li>
+<li>Go through this tutorial: <a href="https://www.learn-js.org/en/Callbacks" target="_blank">https://www.learn-js.org/en/Callbacks</a></li>
+<li>Using setTimeout, change the background color of the page after 5 seconds (5000 milliseconds).<ul>
+<li>Bonus, have the color change <em>every</em> 5 seconds to something different
+<img src="http://g.recordit.co/g2EqBccNzh.gif" alt=""></li>
+</ul>
+</li>
 </ol>
-<h2 id="get-ready-for-javascript">Get ready for JavaScript</h2>
-<p>What is javascript? Watch <a href="https://www.youtube.com/watch?v=nItSSTwBvSU" target="_blank">video</a></p>
-<p>Complete exercises on <a href="https://www.sololearn.com/Course/JavaScript/" target="_blank">sololearn</a> up to module <strong>3</strong>.</p>
+<h2 id="map-function"><code>.map</code> function</h2>
+<p>Using callbacks, you can easily apply a function to every element in an array using the map function;
+The following snippet, will take an array, and return a new array, where every element in the array is double.</p>
+<p>Before:</p>
+<pre class="language-"><code class="lang-JavaScript">var myArray = [1, 5, 10]; // The starting array
+var newArray = []; // The final array
+
+for (var i = 0; i &lt; myArray.length; i++) {
+    var doubleValue = myArray[i] * 2; // Get the value and double it
+    newArray.push(doubleValue) // Add the new value, to the final array
+}
+
+console.log(newArray);
+
+[2, 10, 20]
+</code></pre>
+<pre class="language-"><code class="lang-JavaScript">var myArray = [1, 5, 10];
+
+function double(x) {
+    // Return double of x
+    return x * 2;
+}
+
+// Applies the `double` function to every element in the array
+var newArray = myArray.map(double);
+
+console.log(newArray);
+
+[2, 10, 20]
+</code></pre>
+<h2 id="promises">Promises</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">MDN docs</a></li>
+<li><a href="https://www.promisejs.org/" target="_blank">promisejs.org</a></li>
+<li><a href="https://developers.google.com/web/fundamentals/getting-started/primers/promises" target="_blank">Google Developer</a></li>
+</ul>
+<p>Promises are a new feature of JavaScript (Chrome only for now).
+They allow for writing easier to understand code when dealing with asynchronous functions.
+<img src="http://exploringjs.com/es6/images/promises----promise_states_simple.jpg" alt="">
+The API is very simple, when you have a promise, you can attach either a <code>then</code> callback or a <code>catch</code> callback.
+If the promise is successful, the the function in the <code>then</code> callback is called. If it fails, then the <code>catch</code> callback is called.</p>
+<pre class="language-"><code class="lang-JavaScript">var myPromise = new Promise(function(resolve, reject) {
+    // Do some work in this function
+
+    resolve(100) // If the function was successful
+    //reject(50) // If the function failed
+});
+
+myPromise.then(function(value) {
+    console.log(&apos;success: &apos; + value);
+})
+
+myPromise.catch(function(value) {
+    console.log(&apos;fail:&apos; + value);
+})
+</code></pre>
+<h2 id="fetch">Fetch</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en/docs/Web/API/Fetch_API" target="_blank">MDN fetch API</a></li>
+<li><a href="https://davidwalsh.name/fetch" target="_blank">David Walsh blog</a></li>
+</ul>
+<p><code>fetch</code> is a nicer (more modern) way of creating HTTP requests. It makes heavy use of Promises.</p>
+<pre class="language-"><code class="lang-JavaScript">// Chaining for more &quot;advanced&quot; handling
+fetch(&apos;http://www.mocky.io/v2/584c3d2d1200001b1e372b01&apos;).then(function(response) {
+    return response.json(); // returning another Promise
+}).then(function(json) {
+    // Do something with the json object
+    console.log(json.data); //Prints &apos;Hello world!&apos;
+})
+</code></pre>
+<p>Exercise: Rewrite your homework from last week, using <code>fetch</code> and <code>Promises</code></p>
 
                                 
                                 </section>
@@ -566,12 +666,12 @@
 
             
                 
-                <a href="../build-a-house/" class="navigation navigation-prev " aria-label="Previous page: Build a house">
+                <a href="FORMS.html" class="navigation navigation-prev " aria-label="Previous page: Forms">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../css-challenge/" class="navigation navigation-next " aria-label="Next page: CSS challenge">
+                <a href="HOMEWORK.html" class="navigation navigation-next " aria-label="Next page: Homework">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -582,7 +682,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Blog challenge","level":"1.2.5","depth":2,"next":{"title":"CSS challenge","level":"1.2.6","depth":2,"path":"css-challenge/README.md","ref":"css-challenge/README.md","articles":[]},"previous":{"title":"Build a house","level":"1.2.4","depth":2,"path":"build-a-house/README.md","ref":"build-a-house/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"blog-challenge/README.md","mtime":"2017-02-12T14:20:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-12T15:55:08.718Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Callbacks","level":"1.5.4","depth":2,"next":{"title":"Homework","level":"1.5.5","depth":2,"path":"javascript-module3/HOMEWORK.md","ref":"javascript-module3/HOMEWORK.md","articles":[]},"previous":{"title":"Forms","level":"1.5.3","depth":2,"path":"javascript-module3/FORMS.md","ref":"javascript-module3/FORMS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"javascript-module3/CALLBACKS.md","mtime":"2017-02-12T14:30:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-12T15:55:08.718Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
