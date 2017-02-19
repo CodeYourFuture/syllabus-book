@@ -19,4 +19,5 @@
   * [Lesson 3](react-module/Lesson3.md)
   * [Lesson 4](react-module/Lesson4.md)
   * [UNHCR challenge](react-unhcr/README.md)
+* [Coding Standards and Best Practices](PRACTICES.md)
 * [Contributing](CONTRIBUTING.md)
