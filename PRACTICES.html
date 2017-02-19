@@ -446,11 +446,11 @@
 </li>
 <li><p>Test coverage should be sufficient</p>
 <ul>
-<li>This should meet or exceed the configured threshold; if this isn&#x2019;t possible, explain why</li>
+<li>This should meet or exceed the configured threshold; if this isn&apos;t possible, explain why</li>
 </ul>
 </li>
 <li>Comment code that might be difficult to understand...<ul>
-<li>...but also consider simplifying complex code if at all possible</li>
+<li>...but also consider simplifying complex code if at all possible. If you find that you&apos;re writing a lot of comments, then it&apos;s a good indicator that your code is too verbose and potentially overengineered</li>
 </ul>
 </li>
 </ul>
@@ -463,12 +463,12 @@
 </li>
 <li><p>Keep functions as short as possible</p>
 <ul>
-<li>If a function is longer than 20 lines, consider breaking it down into smaller functions</li>
+<li>If a function is longer than 15 lines, consider breaking it down into smaller functions</li>
 </ul>
 </li>
 <li><p>Use variables if a literal value is repeated more than once</p>
 <ul>
-<li>E.g. <code>console.log(&#x2018;Peter&#x2019;, &#x2018;Peter&#x2019;.length);</code> -&gt; <code>const name = &#x2018;Peter&#x2019;; console.log(name, name.length);</code></li>
+<li>E.g. <code>console.log(&apos;Peter&apos;, &apos;Peter&apos;.length);</code> -&gt; <code>const name = &apos;Peter&apos;; console.log(name, name.length);</code></li>
 </ul>
 </li>
 </ul>
@@ -479,15 +479,15 @@
 <li>Facilitates reuse</li>
 </ul>
 </li>
-<li><p><strong>Don&#x2019;t</strong> use ID-based selectors e.g. <code>#some-id</code></p>
+<li><p><strong>Don&apos;t</strong> use ID-based selectors e.g. <code>#some-id</code></p>
 </li>
-<li><p>Avoid styling HTML element selectors directory, unless it&#x2019;s to remove default browser styling</p>
+<li><p>Avoid styling HTML element selectors directly, unless it&apos;s to remove default browser styling</p>
 </li>
 <li><p>Avoid using style properties in JavaScript</p>
 <ul>
-<li>E.g. <code>myElement.style.display = &#x2018;none&#x2019;;</code></li>
+<li>E.g. <code>myElement.style.display = &apos;none&apos;;</code></li>
 <li>This results in styles that are difficult to reuse</li>
-<li>Use <code>Element.prototype.classList</code> instead e.g. <code>myElement.classList.add(&#x2018;hidden&#x2019;);</code></li>
+<li>Use <code>Element.prototype.classList</code> instead e.g. <code>myElement.classList.add(&apos;hidden&apos;);</code></li>
 </ul>
 </li>
 </ul>
@@ -495,7 +495,7 @@
 <ul>
 <li><p>Make small, frequent commits</p>
 <ul>
-<li>If you make a mistake, then it&#x2019;s easier to revert than if you only make large, occasional commits</li>
+<li>If you make a mistake, then it&apos;s easier to revert than if you only make large, occasional commits</li>
 </ul>
 </li>
 <li><p>Avoid committing commented-out code</p>
@@ -547,7 +547,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Coding Standards and Best Practices","level":"1.6","depth":1,"next":{"title":"Contributing","level":"1.7","depth":1,"path":"CONTRIBUTING.md","ref":"CONTRIBUTING.md","articles":[]},"previous":{"title":"UNHCR challenge","level":"1.5.5","depth":2,"path":"react-unhcr/README.md","ref":"react-unhcr/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"PRACTICES.md","mtime":"2017-02-19T10:24:00.057Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-19T10:21:03.115Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Coding Standards and Best Practices","level":"1.6","depth":1,"next":{"title":"Contributing","level":"1.7","depth":1,"path":"CONTRIBUTING.md","ref":"CONTRIBUTING.md","articles":[]},"previous":{"title":"UNHCR challenge","level":"1.5.5","depth":2,"path":"react-unhcr/README.md","ref":"react-unhcr/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"PRACTICES.md","mtime":"2017-02-19T15:04:29.428Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-19T15:07:27.183Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -555,10 +555,6 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
